@@ -1,0 +1,111 @@
+﻿
+.responsive-table {
+	border-collapse:separate;
+    border-spacing: 0 12px;
+}
+
+.responsive-table tr {
+    box-shadow: 0px 1px 5px 0px rgba(58, 64, 91, 0.15);
+}
+
+.responsive-table tr:hover {
+    box-shadow: 0px 10px 25px 0px rgba(58, 64, 91, 0.15);
+}
+
+
+.responsive-table th, .responsive-table td {
+    padding: 0px 20px;
+    background-color: rgb(255, 255, 255);
+    height: 85px;
+}
+
+.responsive-table:not(.responsive-table-rtl) th, .responsive-table:not(.responsive-table-rtl) td {
+    text-align: left;
+}
+
+.responsive-table.responsive-table-rtl th, .responsive-table.responsive-table-rtl td {
+    text-align: right;
+}
+
+.responsive-table .toggle-button {
+    display: none;
+}
+
+.row-title {
+    color: #5A33F8;
+    font-weight: bold;
+}
+
+.column-title {
+    color: #313133;
+    font-weight: bold;
+}
+
+.column-data {
+    color: #9A9AA3;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td, .responsive-table th {
+        display: block;
+        width: 100%;
+    }
+
+    .responsive-table tr {
+        cursor: pointer;
+        overflow: hidden;
+        max-height: 65px;
+    }	
+    
+    .responsive-table th, .responsive-table td {
+        height: 65px;
+    }
+
+	.responsive-table td{
+		position: relative;        
+	}
+	
+    .responsive-table td:first-child {
+		border-top: 1px solid #f0f0f0;  
+    }	
+	
+	.responsive-table  td:not(:last-child):after {
+		content: ''; 
+		width: 60px; 
+		height: 1px; 
+		background: #f0f0f0; 
+		position: absolute; 
+		bottom: 0px;
+	}
+	
+	.responsive-table:not(.responsive-table-rtl) td:not(:last-child):after{
+		left: 10px;
+	}
+
+	.responsive-table.responsive-table-rtl td:not(:last-child):after {
+        right: 10px;
+	}
+
+    .responsive-table .toggle-button {
+        display: block;
+		color: #aaaaaa;
+        position: absolute;
+        top: 23px;
+        font-size: 19px;
+    }
+	
+	.responsive-table:not(.responsive-table-rtl) .toggle-button {
+        right: 50px;
+	}
+
+	.responsive-table.responsive-table-rtl .toggle-button {
+        left: 50px;
+	}
+	
+	.column-content {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+}
